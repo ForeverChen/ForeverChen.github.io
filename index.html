@@ -1,33 +1,119 @@
-<!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="UTF-8">
-    <title>Foreverchen&#39;s blog by ForeverChen</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-  </head>
-  <body>
-    <section class="page-header">
-      <h1 class="project-name">Foreverchen&#39;s blog</h1>
-      <h2 class="project-tagline"></h2>
-    </section>
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>ForeverChen</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url('digital-7_mono.ttf') format("truetype");
+		}
+		body {
+			margin: 0;
+			padding: 0;
+			background: #ffe;
+			font-size: 12px;
+			overflow: auto
+		}
+		#mainDiv {
+			width: 100%;
+			height: 100%
+		}
+		#code {
+			margin: 10px 0 0 10px;
+			float: none;
+			width: 440px;
+			height: 400px;
+			color: #333;
+			font-family: "Consolas", "Monaco", "Bitstream Vera Sans Mono", "Courier New", "sans-serif";
+			font-size: 12px
+		}
+		#code .string {
+			color: #2a36ff
+		}
+		#code .keyword {
+			color: #7f0055;
+			font-weight: bold
+		}
+		#code .placeholder {
+			margin-left: 15px
+		}
+		#code .space {
+			margin-left: 7px
+		}
+		#code .comments {
+			color: #3f7f5f
+		}
+		#copyright {
+			display: none;
+			margin-top: 10px;
+			text-align: center;
+			width: 100%;
+			color: #666
+		}
+		#copyright a {
+			color: #666
+		}
+	</style>
 
-    <section class="main-content">
-      <h1>
-<a id="chenyonghengcom" class="anchor" href="#chenyonghengcom" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>chenyongheng.com</h1>
+	<script type="text/javascript" src="js/jquery.js"></script>
 
-<p><a href="http://chenyongheng.com" title="Foreverchen 的博客">ForeverChen</a></p>
+</head>
 
-      <footer class="site-footer">
+<body>
+	<div id="mainDiv">
 
-        <span class="site-footer-credits"></span>
-      </footer>
+			<div id="code">
+				<span class="comments">/**</span><br />
+				<span class="space"/><span class="comments">* @ClassName: ForeverChen </span><br />
+				<span class="space"/><span class="comments">* @Description: Instance ChenYongHeng.</span><br />
+				<span class="space"/><span class="comments">* @version: 1.0</span><br />
+				<span class="space"/><span class="comments">* @Date: 1992-08-19.</span><br />
+				<span class="space"/><span class="comments">*/</span><br />
+				class ForeverChen extends Person  {<br />
+				<span class="placeholder"/><span class="keyword">String</span> name = "ChenYongHeng";<br />
+				<span class="placeholder"/><span class="keyword">String</span> nickName = "ForeverChen";<br />
+				<span class="placeholder"/><span class="keyword">String</span> job = "programmer";<br />
+				<span class="placeholder"/><span class="keyword">String</span> weChat = "kernel7";<br />
+				<span class="placeholder"/><span class="keyword">int</span> qqNumber = 654516673;<br />
+				<span class="comments">// constructor .</span><br />
+				<span class="placeholder"/>ForeverChen() {<br />
+				<span class="placeholder"/>}<br />
 
-    </section>
+				}
+			</div>
 
-  
-  </body>
+
+		<div id="copyright">
+
+			Copyright © 2016 <a href='http://chenyongheng.com/'>chenyongheng.com</a>
+		</div>
+	</div>
+	<script type="text/javascript">
+		(function (a) {
+			a.fn.typewriter = function () {
+				this.each(function () {
+					var d = a(this), c = d.html(), b = 0;
+					d.html("");
+					var e = setInterval(function () {
+						var f = c.substr(b, 1);
+						if (f == "<") {
+							b = c.indexOf(">", b) + 1
+						} else {
+							b++
+						}
+						d.html(c.substring(0, b) + (b & 1 ? "_" : ""));
+						if (b >= c.length) {
+							clearInterval(e)
+						}
+					}, 75)
+				});
+				return this
+			}
+		})(jQuery);
+
+		$("#code").typewriter();
+
+	</script>
+</body>
 </html>
